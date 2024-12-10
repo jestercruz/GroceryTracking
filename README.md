@@ -13,6 +13,46 @@ This project demonstrates best practices in C++ development, including modular d
 
 ---
 
+## **Reflection**
+
+### **What problem was this project solving?**
+This project was designed to help a small grocery store analyze their inventory data by calculating item frequencies. It automates tracking which items were purchased most frequently, allowing store owners to make data-driven decisions about stock management. Additionally, the program provides text-based visualizations, such as histograms, making the data easier to interpret or make comparisons.
+
+### **What did you do particularly well?**
+I excelled in making the program modular and maintainable by separating the logic into multiple files (`ItemFrequency.h`, `ItemFrequency.cpp`, and `main.cpp`). This approach improves readability and allows future developers to easily navigate and extend the project. I also incorporated input validation and case-insensitive handling to enhance user experience and program robustness.
+
+### **Where could you enhance your code?**
+While the program is functional, there are areas where it could be improved:
+1. **Efficiency**: 
+   - The current implementation reads the input file sequentially. Adding a caching mechanism could improve performance for larger datasets.
+2. **Security**:
+   - The program assumes the input file is formatted correctly. Adding error handling for malformed files or invalid data would make it more secure.
+3. **Expandability**:
+   - The histogram feature could be enhanced with graphical output using a library like `matplotlib-cpp` or integrating with a GUI framework for a richer user experience.
+
+These improvements would make the program faster, safer, and more user-friendly.
+
+### **Which pieces of the code were most challenging, and how did you overcome them?**
+The most challenging part of the project was implementing case-insensitive search and ensuring the program stored both lowercase keys for matching and original capitalization for display. To overcome this, I used a combination of STL `std::map` for efficient lookups and the `std::transform` function for string manipulation. Online resources, such as C++ documentation and forums like Stack Overflow, were very helpful in understanding best practices for case handling.
+
+### **What tools or resources are you adding to your support network?**
+- **Documentation**: The C++ Standard Library reference documentation became a go-to resource for STL usage.
+- **Communities**: Stack Overflow discussion forums provided solutions for a lot of the programming challenges.
+- **Local Tools**: I’m now using Visual Studio Code with Markdown Preview extensions for documenting projects and Visual Studio to actually write and debug the code.
+
+### **What skills from this project are transferable to other projects or coursework?**
+- **Modular Design**: Dividing code into separate files and classes will be useful for larger-scale projects.
+- **Input Validation**: Implementing user input validation ensures robustness and user-friendliness.
+- **File I/O Handling**: Reading from and writing to files is a common requirement in software development, and this project honed my skills in handling file operations.
+
+### **How did you make this program maintainable, readable, and adaptable?**
+- **Maintainable**: By separating functionality into header and implementation files, I followed industry best practices, ensuring the program is easy to extend and debug.
+- **Readable**: Clear naming conventions, inline comments, and consistent formatting make the code accessible to other developers.
+- **Adaptable**: The modular structure and use of STL containers like `std::map` make it easy to add new features, such as additional data visualizations or different file formats.
+
+
+---
+
 ## **Features**
 
 - **Search for an Item**: Search for any item in the inventory, regardless of case (e.g., "zucchini" or "ZUCCHINI").
@@ -154,3 +194,4 @@ For questions or suggestions, feel free to reach out:
 
 - Email: jestergcruz@gmail.com
 - GitHub: jestercruz
+
