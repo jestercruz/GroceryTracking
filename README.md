@@ -2,11 +2,11 @@
 
 ## **Overview**
 
-The **Corner Grocer Inventory Management** program helps small grocery stores analyze their inventory by tracking the frequency of purchased items. The program provides an interactive menu for users to:
+The **Corner Grocer Inventory Management** program helps the small grocery store analyze its inventory by tracking the frequency of purchased items. The program provides an interactive menu for users to:
 
-- Search for an item's frequency.
+- Search for an item to display its frequency.
 - View a complete list of item frequencies.
-- Display a histogram of item frequencies.
+- Display a "histogram" of item frequencies.
 - Save and read data from backup files.
 
 This project demonstrates best practices in C++ development, including modular design, input validation, and case-insensitive handling of user inputs.
@@ -16,32 +16,32 @@ This project demonstrates best practices in C++ development, including modular d
 ## **Reflection**
 
 ### **What problem was this project solving?**
-This project was designed to help a small grocery store analyze their inventory data by calculating item frequencies. It automates tracking which items were purchased most frequently, allowing store owners to make data-driven decisions about stock management. Additionally, the program provides text-based visualizations, such as histograms, making the data easier to interpret or make comparisons.
+This project was designed to help a small grocery store analyze its inventory data by calculating item frequencies. It automates tracking which items were purchased most frequently, allowing store owners to make data-driven decisions about stock management. The program provides text-based visualization, making the data easier to interpret.
 
 ### **What did you do particularly well?**
-I excelled in making the program modular and maintainable by separating the logic into multiple files (`ItemFrequency.h`, `ItemFrequency.cpp`, and `main.cpp`). This approach improves readability and allows future developers to easily navigate and extend the project. I also incorporated input validation and case-insensitive handling to enhance user experience and program robustness.
+I excelled in making the program modular and maintainable by separating the logic into multiple files (`ItemFrequency.h`, `ItemFrequency.cpp`, and `main.cpp`). This approach improves readability and allows future developers to easily navigate and extend the project. I also incorporated input validation and case-insensitive handling to enhance user experience.
 
 ### **Where could you enhance your code?**
 While the program is functional, there are areas where it could be improved:
 1. **Efficiency**: 
    - The current implementation reads the input file sequentially. Adding a caching mechanism could improve performance for larger datasets.
 2. **Security**:
-   - The program assumes the input file is formatted correctly. Adding error handling for malformed files or invalid data would make it more secure.
+   - The program assumes the input file is formatted correctly. Adding error handling for incorrectly formatted files or invalid data would make it more secure.
 3. **Expandability**:
    - The histogram feature could be enhanced with graphical output using a library like `matplotlib-cpp` or integrating with a GUI framework for a richer user experience.
 
 These improvements would make the program faster, safer, and more user-friendly.
 
 ### **Which pieces of the code were most challenging, and how did you overcome them?**
-The most challenging part of the project was implementing case-insensitive search and ensuring the program stored both lowercase keys for matching and original capitalization for display. To overcome this, I used a combination of STL `std::map` for efficient lookups and the `std::transform` function for string manipulation. Online resources, such as C++ documentation and forums like Stack Overflow, were very helpful in understanding best practices for case handling.
+The most challenging part of the project was implementing a case-insensitive search while ensuring the data's original capitalization. To overcome this, I used a combination of STL `std::map` for efficient lookups and the `std::transform` function for string manipulation. Online resources, such as C++ documentation and forums like Stack Overflow, were very helpful in finding examples for case handling.
 
 ### **What tools or resources are you adding to your support network?**
 - **Documentation**: The C++ Standard Library reference documentation became a go-to resource for STL usage.
 - **Communities**: Stack Overflow discussion forums provided solutions for a lot of the programming challenges.
-- **Local Tools**: I’m now using Visual Studio Code with Markdown Preview extensions for documenting projects and Visual Studio to actually write and debug the code.
+- **Local Tools**: I’m now using Visual Studio Code with Markdown Preview extensions to document projects and Visual Studio to write and debug C++ code.
 
 ### **What skills from this project are transferable to other projects or coursework?**
-- **Modular Design**: Dividing code into separate files and classes will be useful for larger-scale projects.
+- **Modular Design**: Dividing code into separate files for classes will be useful for larger-scale projects.
 - **Input Validation**: Implementing user input validation ensures robustness and user-friendliness.
 - **File I/O Handling**: Reading from and writing to files is a common requirement in software development, and this project honed my skills in handling file operations.
 
@@ -49,7 +49,6 @@ The most challenging part of the project was implementing case-insensitive searc
 - **Maintainable**: By separating functionality into header and implementation files, I followed industry best practices, ensuring the program is easy to extend and debug.
 - **Readable**: Clear naming conventions, inline comments, and consistent formatting make the code accessible to other developers.
 - **Adaptable**: The modular structure and use of STL containers like `std::map` make it easy to add new features, such as additional data visualizations or different file formats.
-
 
 ---
 
@@ -68,7 +67,7 @@ The most challenging part of the project was implementing case-insensitive searc
 The project is organized into multiple files for modularity and maintainability:
 
 ```
-CornerGrocer/
+GroceryTracking/
 ├── Input_File.txt # Input file containing purchased items
 ├── frequency.dat # Backup file storing item frequencies (generated by the program)
 ├── ItemFrequency.h # Header file for the ItemFrequency class
@@ -93,7 +92,7 @@ Follow these instructions to set up and run the program locally.
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/jestercruz/GroceryTracking.git
-   cd corner-grocer
+   cd GroceryTracking
    ```
 
 Ensure Input_File.txt is present in the project directory. This file should contain a list of purchased items, one item per line.
@@ -103,7 +102,7 @@ Ensure Input_File.txt is present in the project directory. This file should cont
 Using g++:
 
 ```bash
-g++ -o CornerGrocer main.cpp ItemFrequency.cpp
+g++ -o GroceryTracker main.cpp ItemFrequency.cpp
 ```
 
 ### Using Visual Studio:
@@ -117,7 +116,7 @@ Build the solution.
 After compiling, run the executable:
 
 ```bash
-./CornerGrocer
+./GroceryTracker
 ```
 
 ## How to Use
